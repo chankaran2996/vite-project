@@ -1,13 +1,20 @@
 import Input from 'costuminputg'
 import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    const handileSubmit = () => {
+    const navigate = useNavigate()
+
+    const handileSubmit = (e) => {
+        e.preventDefault()
         console.log(email)
         console.log(password)
+        setEmail("")
+        setPassword("")
+        navigate("/dashboard")
     }
     return (
         <center>
@@ -31,6 +38,7 @@ const Login = () => {
                     />
                     <button className='bg-blue-600 w-full mt-4' type='submit'>Login</button>
                 </form>
+                <p>New user? <Link className=' underline text-blue-700' to="/register">Register</Link> </p>
             </div>
         </center>
     )
