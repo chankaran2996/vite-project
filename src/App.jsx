@@ -2,6 +2,8 @@
 
 import { BrowserRouter , Routes, Route } from "react-router-dom"
 import Dashboard from "./pages/Dashboard"
+import Register from "./pages/register"
+import Login from "./pages/Login"
 // import Login from "./pages/Login"
 // import Register from "./pages/register"
 // import PageNotFound from "./pages/PageNotFound"
@@ -22,7 +24,9 @@ function App() {
   </h1> */}
   <BrowserRouter>
   <Routes>
-    <Route path="/" element={<Dashboard />} />
+    <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/register" element={<Register />} />
+    <Route path="/"  element={ <Login />} />
 
   </Routes>
   </BrowserRouter>

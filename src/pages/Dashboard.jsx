@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import TodoList from "../components/TodoList"
+import { IoMdAdd } from "react-icons/io";
 
 
 const Dashboard = () => {
@@ -32,8 +33,8 @@ const Dashboard = () => {
             value={data}  
             onChange={(e) => setData(e.target.value)}/>
             <button 
-            className="bg-blue-600 rounded- 2xl p-4 text-black" 
-            onClick={handileSubmit} > Add</button>
+            className="bg-blue-600 rounded- 2xl p-4  text-black" 
+            onClick={handileSubmit} > <IoMdAdd className=" text-[8px]" /> Add</button>
            </div>
            <ol>
             {
